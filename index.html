@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار فلسطين التفاعلي</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #007A33, #FFFFFF, #C8102E);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f4f4f4;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #007A33;
+        }
+
+        .question {
+            font-size: 22px;
+            margin: 20px 0;
+        }
+
+        .options button {
+            display: block;
+            margin: 10px auto;
+            padding: 12px;
+            background-color: #C8102E;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 80%;
+        }
+
+        .options button:hover {
+            background-color: #007A33;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .next-button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #007A33;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background: #007A33;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>اختبار فلسطين التفاعلي</h1>
+        <div id="quiz-section">
+            <div id="question" class="question">Loading question...</div>
+            <div class="options" id="options"></div>
+        </div>
+        <div id="result-section" class="result" style="display: none;">
+            <div id="answer-container"></div>
+            <div class="image-container" id="image-container" style="display: none;">
+                <img src="" alt="الإجابة الصحيحة" id="answer-image">
+            </div>
+            <button class="next-button" onclick="nextQuestion()">السؤال التالي</button>
+        </div>
+    </div>
+    <footer>
+        تم تطوير هذا الاختبار بواسطة <strong>Dkhoss</strong> 🇵🇸
+    </footer>
+
+    <script>
+        const questions = [
+            {
+                question: "ما هو اسم عاصمة فلسطين؟",
+                options: ["القدس", "عمان", "بيروت", "القاهرة"],
+                answer: "القدس",
+                image: "https://upload.wikimedia.org/wikipedia/commons/8/84/Dome_of_the_Rock%2C_Jerusalem.jpg"
+            },
+            {
+                question: "ما هو البحر الذي يحد فلسطين غربًا؟",
+                options: ["البحر الأحمر", "البحر الأبيض المتوسط", "بحر قزوين", "البحر الأسود"],
+                answer: "البحر الأبيض المتوسط",
+                image: "https://upload.wikimedia.org/wikipedia/commons/3/30/Mediterranean_Sea.JPG"
+            },
+            {
+                question: "ما هي أعلى قمة جبلية في فلسطين؟",
+                options: ["جبل الجرمق", "جبل الطور", "جبل الكرمل", "جبل عيبال"],
+                answer: "جبل الجرمق",
+                image: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Mount_Meron_Peak.jpg"
+            },
+            // Add more questions here with images...
+        ];
+
+        let currentQuestionIndex = 0;
+
+        function loadQuestion() {
+            const questionElement = document.getElementById("question");
+            const optionsElement = document.getElementById("options");
+            const resultSection = document.getElementById("result-section");
+            const imageContainer = document.getElementById("image-container");
+
+            resultSection.style.display = "none";
+            imageContainer.style.display = "none";
+            optionsElement.innerHTML = "";
+
+            const currentQuestion = questions[currentQuestionIndex];
+            questionElement.innerText = currentQuestion.question;
+
+            currentQuestion.options.forEach(option => {
+                const button = document.createElement("button");
+                button.innerText = option;
+                button.onclick = () => checkAnswer(option);
+                optionsElement.appendChild(button);
+            });
+        }
+
+        function checkAnswer(selected) {
+            const currentQuestion = questions[currentQuestionIndex];
+            const resultSection = document.getElementById("result-section");
+            const answerContainer = document.getElementById("answer-container");
+            const imageContainer = document.getElementById("image-container");
+            const answerImage = document.getElementById("answer-image");
+
+            if (selected === currentQuestion.answer) {
+                answerContainer.innerText = `صحيح! الإجابة: ${currentQuestion.answer}`;
+            } else {
+                answerContainer.innerText = `خطأ! الإجابة الصحيحة: ${currentQuestion.answer}`;
+            }
+
+            // Display correct answer image immediately
+            answerImage.src = currentQuestion.image;
+            imageContainer.style.display = "block";
+
+            resultSection.style.display = "block";
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                document.getElementById("quiz-section").innerHTML = "<h2>تهانينا! لقد أكملت الاختبار!</h2>";
+            }
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>
