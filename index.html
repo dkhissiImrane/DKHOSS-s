@@ -1,83 +1,24 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اختبار المعرفة المغربية</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Morocco Quiz</title>
+    <link rel="stylesheet" href="style.css">  <!-- Link to the CSS file -->
 </head>
 <body>
+    <div class="container">
+        <h1>Morocco Quiz</h1>
+        <h2>Test your knowledge about Morocco!</h2>
 
-    <div class="quiz-container">
-        <h1>اختبار المعرفة المغربية</h1>
+        <button id="question1">What is the capital of Morocco?</button>
+        <button id="question2">What is the currency of Morocco?</button>
 
-        <!-- المحور 1: تاريخ المغرب -->
-        <div class="question">
-            <h2>المحور 1: تاريخ المغرب</h2>
-            <p>1. متى تأسست الدولة المغربية؟</p>
-            <button onclick="checkAnswer('1956', 'إجابة صحيحة!')">1956</button>
-            <button onclick="checkAnswer('1492', 'إجابة خاطئة!')">1492</button>
-            <button onclick="checkAnswer('1800', 'إجابة خاطئة!')">1800</button>
-        </div>
-
-        <!-- المحور 2: جغرافيا المغرب -->
-        <div class="question">
-            <h2>المحور 2: جغرافيا المغرب</h2>
-            <p>2. ما هي أعلى قمة جبلية في المغرب؟</p>
-            <button onclick="checkAnswer('توبقال', 'إجابة صحيحة!')">توبقال</button>
-            <button onclick="checkAnswer('جبل الأطلس', 'إجابة خاطئة!')">جبل الأطلس</button>
-            <button onclick="checkAnswer('جبل السرو', 'إجابة خاطئة!')">جبل السرو</button>
-        </div>
-
-        <!-- المحور 3: الثقافة المغربية -->
-        <div class="question">
-            <h2>المحور 3: الثقافة المغربية</h2>
-            <p>3. ما هي أشهر أنواع الطعام المغربي؟</p>
-            <button onclick="checkAnswer('الكسكس', 'إجابة صحيحة!')">الكسكس</button>
-            <button onclick="checkAnswer('المعكرونة', 'إجابة خاطئة!')">المعكرونة</button>
-            <button onclick="checkAnswer('البيتزا', 'إجابة خاطئة!')">البيتزا</button>
-        </div>
-
-        <!-- المحور 4: الاقتصاد المغربي -->
-        <div class="question">
-            <h2>المحور 4: الاقتصاد المغربي</h2>
-            <p>4. ما هي أهم القطاعات الاقتصادية في المغرب؟</p>
-            <button onclick="checkAnswer('الزراعة والصناعة', 'إجابة صحيحة!')">الزراعة والصناعة</button>
-            <button onclick="checkAnswer('التكنولوجيا', 'إجابة خاطئة!')">التكنولوجيا</button>
-            <button onclick="checkAnswer('السياحة', 'إجابة خاطئة!')">السياحة</button>
-        </div>
-
-        <!-- المحور 5: السياسة المغربية -->
-        <div class="question">
-            <h2>المحور 5: السياسة المغربية</h2>
-            <p>5. من هو الملك الحالي للمغرب؟</p>
-            <button onclick="checkAnswer('الملك محمد السادس', 'إجابة صحيحة!')">الملك محمد السادس</button>
-            <button onclick="checkAnswer('الملك الحسن الثاني', 'إجابة خاطئة!')">الملك الحسن الثاني</button>
-            <button onclick="checkAnswer('الملك محمد الخامس', 'إجابة خاطئة!')">الملك محمد الخامس</button>
-        </div>
-
-        <!-- المحور 6: التراث المغربي -->
-        <div class="question">
-            <h2>المحور 6: التراث المغربي</h2>
-            <p>6. ما هي أبرز مواقع التراث العالمي في المغرب؟</p>
-            <button onclick="checkAnswer('موقع مراكش', 'إجابة صحيحة!')">موقع مراكش</button>
-            <button onclick="checkAnswer('موقع مكناس', 'إجابة خاطئة!')">موقع مكناس</button>
-            <button onclick="checkAnswer('موقع فاس', 'إجابة خاطئة!')">موقع فاس</button>
-        </div>
-
-        <!-- المحور 7: القضايا الاجتماعية في المغرب -->
-        <div class="question">
-            <h2>المحور 7: القضايا الاجتماعية في المغرب</h2>
-            <p>7. ما هي أبرز القضايا الاجتماعية التي يواجهها المجتمع المغربي؟</p>
-            <button onclick="checkAnswer('البطالة والفقر', 'إجابة صحيحة!')">البطالة والفقر</button>
-            <button onclick="checkAnswer('الظروف الجوية', 'إجابة خاطئة!')">الظروف الجوية</button>
-            <button onclick="checkAnswer('التكنولوجيا الرقمية', 'إجابة خاطئة!')">التكنولوجيا الرقمية</button>
-        </div>
-
-        <!-- Final message -->
-        <div id="result"></div>
+        <footer>
+            <p>Created by Dkhoss</p>
+        </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script>  <!-- Link to the JavaScript file -->
 </body>
 </html>
