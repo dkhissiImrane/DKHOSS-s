@@ -4,7 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اختبار المعرفة المغربية</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            text-align: center;
+            color: #333;
+            direction: rtl;
+        }
+
+        /* Container for the content */
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        h1 {
+            color: #006233;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #1a73e8;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Axes list */
+        .axes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .axes li {
+            margin: 5px 0;
+            color: #444;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        /* Question styles */
+        .question {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .question-btn {
+            background-color: #006233;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .question-btn:hover {
+            background-color: #004a26;
+        }
+
+        /* Answer container */
+        .answer-container {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            display: none;
+        }
+
+        .answer-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* Footer styling */
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -26,92 +119,22 @@
 
         <!-- Questions Section -->
         <div class="questions">
-            <!-- Axis 1: History -->
-            <h3>المحور الأول: التاريخ المغربي</h3>
+            <!-- Example Question -->
             <div id="question1" class="question">
                 <button class="question-btn">ما هي أول دولة أسسها المغاربة؟</button>
-                <div class="answer-container" id="answer1" style="display: none;">
+                <div class="answer-container">
                     <p>الإجابة الصحيحة: دولة الأدارسة</p>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Idrisid_dynasty.png" alt="خريطة دولة الأدارسة">
                 </div>
             </div>
+
             <div id="question2" class="question">
-                <button class="question-btn">ما اسم المعركة التي انتصر فيها المغرب على البرتغال عام 1578؟</button>
-                <div class="answer-container" id="answer2" style="display: none;">
-                    <p>الإجابة الصحيحة: معركة وادي المخازن</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Battle_of_Alcacer_Kebir.png" alt="معركة وادي المخازن">
-                </div>
-            </div>
-
-            <!-- Axis 2: Economy -->
-            <h3>المحور الثاني: الاقتصاد المغربي</h3>
-            <div id="question3" class="question">
-                <button class="question-btn">ما هو المنتج الزراعي الذي يعتبر المغرب أكبر مصدر له في العالم؟</button>
-                <div class="answer-container" id="answer3" style="display: none;">
-                    <p>الإجابة الصحيحة: الفوسفات</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Phosphate_Mine_Morocco.jpg" alt="صورة الفوسفات">
-                </div>
-            </div>
-            <div id="question4" class="question">
-                <button class="question-btn">ما هي العملة الرسمية للمغرب؟</button>
-                <div class="answer-container" id="answer4" style="display: none;">
-                    <p>الإجابة الصحيحة: الدرهم المغربي</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Moroccan_dirham_100.png" alt="صورة الدرهم المغربي">
-                </div>
-            </div>
-
-            <!-- Axis 3: Geography -->
-            <h3>المحور الثالث: الجغرافيا المغربية</h3>
-            <div id="question5" class="question">
-                <button class="question-btn">ما هي أعلى قمة جبلية في المغرب؟</button>
-                <div class="answer-container" id="answer5" style="display: none;">
-                    <p>الإجابة الصحيحة: جبل توبقال</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Mount_Toubkal.jpg" alt="جبل توبقال">
-                </div>
-            </div>
-            <div id="question6" class="question">
-                <button class="question-btn">كم عدد الجهات الإدارية في المغرب؟</button>
-                <div class="answer-container" id="answer6" style="display: none;">
-                    <p>الإجابة الصحيحة: 12 جهة</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Regions_of_Morocco_map_ar.png" alt="خريطة الجهات">
-                </div>
-            </div>
-
-            <!-- Axis 4: Politics -->
-            <h3>المحور الرابع: السياسة المغربية</h3>
-            <div id="question7" class="question">
-                <button class="question-btn">من هو الملك الحالي للمغرب؟</button>
-                <div class="answer-container" id="answer7" style="display: none;">
-                    <p>الإجابة الصحيحة: الملك محمد السادس</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mohammed_VI_of_Morocco.jpg" alt="صورة الملك محمد السادس">
-                </div>
-            </div>
-            <div id="question8" class="question">
-                <button class="question-btn">ما هو البرلمان المغربي؟</button>
-                <div class="answer-container" id="answer8" style="display: none;">
-                    <p>الإجابة الصحيحة: مؤسسة تشريعية</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Moroccan_Parliament_building.jpg" alt="صورة البرلمان">
-                </div>
-            </div>
-
-            <!-- Axis 5: Culture -->
-            <h3>المحور الخامس: الثقافة المغربية</h3>
-            <div id="question9" class="question">
                 <button class="question-btn">ما هو الطبق التقليدي الشهير في المغرب؟</button>
-                <div class="answer-container" id="answer9" style="display: none;">
+                <div class="answer-container">
                     <p>الإجابة الصحيحة: الكسكس</p>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Moroccan_couscous.jpg" alt="طبق الكسكس">
                 </div>
             </div>
-            <div id="question10" class="question">
-                <button class="question-btn">ما اسم الزي التقليدي المغربي؟</button>
-                <div class="answer-container" id="answer10" style="display: none;">
-                    <p>الإجابة الصحيحة: الجلباب</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Djellaba.jpg" alt="الجلباب">
-                </div>
-            </div>
-
-            <!-- Repeat for Axes 6 and 7 -->
         </div>
 
         <footer>
@@ -119,6 +142,21 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // JavaScript to handle question interactions
+        document.querySelectorAll('.question-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Find the associated answer container
+                const answerContainer = button.nextElementSibling;
+
+                // Toggle visibility
+                if (answerContainer.style.display === 'none' || !answerContainer.style.display) {
+                    answerContainer.style.display = 'block';
+                } else {
+                    answerContainer.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
