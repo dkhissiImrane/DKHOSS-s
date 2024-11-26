@@ -1,51 +1,48 @@
-/* Global Styles */
+/* General Style */
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
 }
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
-    color: #c8102e; /* Moroccan red */
+    color: #c8102e; /* Moroccan Red */
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
 h2 {
-    color: #006747; /* Green (Moroccan flag green) */
-    text-align: center;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    color: #006747; /* Moroccan Green */
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #c8102e; /* Red color */
+    padding: 12px 30px;
+    background-color: #c8102e; /* Red */
     color: white;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin: 10px;
 }
 
 button:hover {
-    background-color: #b00626; /* Darker red */
+    background-color: #b00626;
 }
 
 button:active {
@@ -57,33 +54,39 @@ button:disabled {
     cursor: not-allowed;
 }
 
-.question {
+.answer {
+    margin-top: 20px;
     font-size: 18px;
-    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #90ee90; /* Light Green */
 }
 
-.answer {
-    background-color: #90ee90; /* Light green */
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 footer {
-    text-align: center;
     font-size: 14px;
     color: #aaa;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .container {
         width: 90%;
-        padding: 15px;
     }
-
     h1 {
-        font-size: 24px;
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    button {
+        font-size: 14px;
     }
 }
