@@ -1,24 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morocco Quiz</title>
-    <link rel="stylesheet" href="style.css">  <!-- Link to the CSS file -->
+    <title>اختبار المعرفة المغربية</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Morocco Quiz</h1>
-        <h2>Test your knowledge about Morocco!</h2>
+        <h1>اختبار المعرفة المغربية</h1>
+        <h2>اختبر معلوماتك حول موضوعات المغرب المختلفة!</h2>
+        
+        <div class="axes">
+            <h3>المحاور السبعة:</h3>
+            <ul>
+                <li>التاريخ المغربي</li>
+                <li>الاقتصاد المغربي</li>
+                <li>الجغرافيا المغربية</li>
+                <li>السياسة المغربية</li>
+                <li>الثقافة المغربية</li>
+                <li>الرياضة المغربية</li>
+                <li>المجتمع المغربي</li>
+            </ul>
+        </div>
 
-        <button id="question1">What is the capital of Morocco?</button>
-        <button id="question2">What is the currency of Morocco?</button>
+        <!-- Questions Section -->
+        <div class="questions">
+            <!-- Axis 1: History -->
+            <h3>المحور الأول: التاريخ المغربي</h3>
+            <div id="question1" class="question">
+                <button class="question-btn">ما هي أول دولة أسسها المغاربة؟</button>
+                <div class="answer-container" id="answer1" style="display: none;">
+                    <p>الإجابة الصحيحة: دولة الأدارسة</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Idrisid_dynasty.png" alt="خريطة دولة الأدارسة">
+                </div>
+            </div>
+            <div id="question2" class="question">
+                <button class="question-btn">ما اسم المعركة التي انتصر فيها المغرب على البرتغال عام 1578؟</button>
+                <div class="answer-container" id="answer2" style="display: none;">
+                    <p>الإجابة الصحيحة: معركة وادي المخازن</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Battle_of_Alcacer_Kebir.png" alt="معركة وادي المخازن">
+                </div>
+            </div>
+
+            <!-- Axis 2: Economy -->
+            <h3>المحور الثاني: الاقتصاد المغربي</h3>
+            <div id="question3" class="question">
+                <button class="question-btn">ما هو المنتج الزراعي الذي يعتبر المغرب أكبر مصدر له في العالم؟</button>
+                <div class="answer-container" id="answer3" style="display: none;">
+                    <p>الإجابة الصحيحة: الفوسفات</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Phosphate_Mine_Morocco.jpg" alt="صورة الفوسفات">
+                </div>
+            </div>
+            <div id="question4" class="question">
+                <button class="question-btn">ما هي العملة الرسمية للمغرب؟</button>
+                <div class="answer-container" id="answer4" style="display: none;">
+                    <p>الإجابة الصحيحة: الدرهم المغربي</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Moroccan_dirham_100.png" alt="صورة الدرهم المغربي">
+                </div>
+            </div>
+
+            <!-- Axis 3: Geography -->
+            <h3>المحور الثالث: الجغرافيا المغربية</h3>
+            <div id="question5" class="question">
+                <button class="question-btn">ما هي أعلى قمة جبلية في المغرب؟</button>
+                <div class="answer-container" id="answer5" style="display: none;">
+                    <p>الإجابة الصحيحة: جبل توبقال</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Mount_Toubkal.jpg" alt="جبل توبقال">
+                </div>
+            </div>
+            <div id="question6" class="question">
+                <button class="question-btn">كم عدد الجهات الإدارية في المغرب؟</button>
+                <div class="answer-container" id="answer6" style="display: none;">
+                    <p>الإجابة الصحيحة: 12 جهة</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Regions_of_Morocco_map_ar.png" alt="خريطة الجهات">
+                </div>
+            </div>
+
+            <!-- Axis 4: Politics -->
+            <h3>المحور الرابع: السياسة المغربية</h3>
+            <div id="question7" class="question">
+                <button class="question-btn">من هو الملك الحالي للمغرب؟</button>
+                <div class="answer-container" id="answer7" style="display: none;">
+                    <p>الإجابة الصحيحة: الملك محمد السادس</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mohammed_VI_of_Morocco.jpg" alt="صورة الملك محمد السادس">
+                </div>
+            </div>
+            <div id="question8" class="question">
+                <button class="question-btn">ما هو البرلمان المغربي؟</button>
+                <div class="answer-container" id="answer8" style="display: none;">
+                    <p>الإجابة الصحيحة: مؤسسة تشريعية</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Moroccan_Parliament_building.jpg" alt="صورة البرلمان">
+                </div>
+            </div>
+
+            <!-- Axis 5: Culture -->
+            <h3>المحور الخامس: الثقافة المغربية</h3>
+            <div id="question9" class="question">
+                <button class="question-btn">ما هو الطبق التقليدي الشهير في المغرب؟</button>
+                <div class="answer-container" id="answer9" style="display: none;">
+                    <p>الإجابة الصحيحة: الكسكس</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Moroccan_couscous.jpg" alt="طبق الكسكس">
+                </div>
+            </div>
+            <div id="question10" class="question">
+                <button class="question-btn">ما اسم الزي التقليدي المغربي؟</button>
+                <div class="answer-container" id="answer10" style="display: none;">
+                    <p>الإجابة الصحيحة: الجلباب</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Djellaba.jpg" alt="الجلباب">
+                </div>
+            </div>
+
+            <!-- Repeat for Axes 6 and 7 -->
+        </div>
 
         <footer>
-            <p>Created by Dkhoss</p>
+            <p>تم التطوير بواسطة دخص</p>
         </footer>
     </div>
 
-    <script src="script.js"></script>  <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
