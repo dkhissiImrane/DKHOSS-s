@@ -1,39 +1,89 @@
 /* Global Styles */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
-h1 {
-  text-align: center;
-  color: #007bff; /* A nice shade of blue */
-  padding: 20px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #c8102e; /* Moroccan red */
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #006747; /* Green (Moroccan flag green) */
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 button {
-  background-color: #28a745; /* Green button */
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin: 10px;
-  transition: background-color 0.3s;
+    padding: 10px 20px;
+    background-color: #c8102e; /* Red color */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #218838; /* Darker green on hover */
+    background-color: #b00626; /* Darker red */
+}
+
+button:active {
+    background-color: #e60000;
+}
+
+button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+.question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.answer {
+    background-color: #90ee90; /* Light green */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 50px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
 }
