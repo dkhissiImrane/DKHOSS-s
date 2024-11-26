@@ -4,159 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اختبار المعرفة المغربية</title>
-    <style>
-        /* General body styling */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            text-align: center;
-            color: #333;
-            direction: rtl;
-        }
-
-        /* Container for the content */
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Header */
-        h1 {
-            color: #006233;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            color: #1a73e8;
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-
-        /* Axes list */
-        .axes ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .axes li {
-            margin: 5px 0;
-            color: #444;
-            font-size: 1.1em;
-            font-weight: bold;
-        }
-
-        /* Question styles */
-        .question {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        .question-btn {
-            background-color: #006233;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
-        }
-
-        .question-btn:hover {
-            background-color: #004a26;
-        }
-
-        /* Answer container */
-        .answer-container {
-            margin-top: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            display: none;
-        }
-
-        .answer-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        /* Footer styling */
-        footer {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #666;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>اختبار المعرفة المغربية</h1>
-        <h2>اختبر معلوماتك حول موضوعات المغرب المختلفة!</h2>
-        
+        <h2>اختبر معرفتك حول المغرب في سبعة محاور رئيسية</h2>
+
         <div class="axes">
-            <h3>المحاور السبعة:</h3>
+            <h3>المحاور:</h3>
             <ul>
-                <li>التاريخ المغربي</li>
-                <li>الاقتصاد المغربي</li>
-                <li>الجغرافيا المغربية</li>
-                <li>السياسة المغربية</li>
-                <li>الثقافة المغربية</li>
-                <li>الرياضة المغربية</li>
-                <li>المجتمع المغربي</li>
+                <li><a href="axis1.html">التاريخ المغربي</a></li>
+                <li><a href="axis2.html">الاقتصاد المغربي</a></li>
+                <li><a href="axis3.html">الجغرافيا المغربية</a></li>
+                <li><a href="axis4.html">السياسة المغربية</a></li>
+                <li><a href="axis5.html">الثقافة المغربية</a></li>
+                <li><a href="axis6.html">الرياضة المغربية</a></li>
+                <li><a href="axis7.html">المجتمع المغربي</a></li>
             </ul>
         </div>
 
-        <!-- Questions Section -->
-        <div class="questions">
-            <!-- Example Question -->
-            <div id="question1" class="question">
-                <button class="question-btn">ما هي أول دولة أسسها المغاربة؟</button>
-                <div class="answer-container">
-                    <p>الإجابة الصحيحة: دولة الأدارسة</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Idrisid_dynasty.png" alt="خريطة دولة الأدارسة">
-                </div>
-            </div>
-
-            <div id="question2" class="question">
-                <button class="question-btn">ما هو الطبق التقليدي الشهير في المغرب؟</button>
-                <div class="answer-container">
-                    <p>الإجابة الصحيحة: الكسكس</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Moroccan_couscous.jpg" alt="طبق الكسكس">
-                </div>
-            </div>
-        </div>
-
         <footer>
-            <p>تم التطوير بواسطة دخص</p>
+            <p>تم تطوير الموقع بواسطة <strong>DKHOSS</strong></p>
         </footer>
     </div>
-
-    <script>
-        // JavaScript to handle question interactions
-        document.querySelectorAll('.question-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                // Find the associated answer container
-                const answerContainer = button.nextElementSibling;
-
-                // Toggle visibility
-                if (answerContainer.style.display === 'none' || !answerContainer.style.display) {
-                    answerContainer.style.display = 'block';
-                } else {
-                    answerContainer.style.display = 'none';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
